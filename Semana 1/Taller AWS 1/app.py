@@ -250,9 +250,4 @@ def update_output_div(date, hour, proy):
 
 # Run the server
 if __name__ == "__main__":
-    # Dash newer versions use app.run()
-    try:
-        app.run(debug=True)
-    except TypeError:
-        # Fallback for older Dash versions
-        app.run_server(debug=True)
+    app.run_server(host="0.0.0.0", port=8050, debug=True)
